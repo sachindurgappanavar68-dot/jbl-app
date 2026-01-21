@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JBL Pro Season 2 – Kabaddi</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    header { background: #1e3a8a; color: white; padding: 15px; text-align: center; }
+    nav { display: flex; justify-content: space-around; background: #2563eb; }
+    nav button { flex: 1; padding: 12px; border: none; background: none; color: white; font-size: 14px; cursor: pointer; }
+    nav button:hover { background: #1e40af; }
+    .container { padding: 15px; }
+    .card { background: white; padding: 15px; margin-bottom: 12px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; }
+    .hidden { display: none; }
+    footer { text-align: center; padding: 10px; font-size: 12px; color: #555; }
+    input, select, button.admin { width: 100%; padding: 10px; margin: 6px 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>JBL Pro Season 2 – Kabaddi</h1>
+  <p>Organizer: Jai Maruti Sports Club, Junjanbail</p>
+</header>
+
+<nav>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('teams')">Teams</button>
+  <button onclick="showSection('matches')">Matches</button>
+  <button onclick="showSection('scores')">Scores</button>
+  <button onclick="showSection('admin')">Admin</button>
+</nav>
+
+<div class="container">
+
+  <div id="home" class="card">
+    <h2>Welcome</h2>
+    <p>Welcome to JBL Pro Season 2 Kabaddi Tournament.</p>
+    <p>Follow live matches, scores, teams and points table.</p>
+  </div>
+
+  <div id="teams" class="card hidden">
+    <h2>Teams</h2>
+    <ul>
+      <li>Team 1</li>
+      <li>Team 2</li>
+      <li>Team 3</li>
+      <li>Team 4</li>
+      <li>Team 5</li>
+    </ul>
+  </div>
+
+  <div id="matches" class="card hidden">
+    <h2>Match Schedule</h2>
+    <p>Day 1 to Day 5 – League Matches</p>
+    <p>Each team plays 2 matches per day</p>
+  </div>
+
+  <div id="scores" class="card hidden">
+    <h2>Live Scores</h2>
+    <p>Scores will be updated by Admin.</p>
+    <p><strong>Match:</strong> Team 1 vs Team 2</p>
+    <p><strong>Score:</strong> 0 - 0</p>
+  </div>
+
+  <div id="admin" class="card hidden">
+    <h2>Admin Login</h2>
+    <input type="password" placeholder="Enter Admin Password" />
+    <button class="admin">Login</button>
+    <p style="font-size:12px;color:#666;">(Admin can update teams, matches & scores)</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 JBL Pro Season 2 Kabaddi
+</footer>
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('.card');
+    sections.forEach(sec => sec.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
 
